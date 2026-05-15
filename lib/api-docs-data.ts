@@ -386,8 +386,7 @@ export const fileCategory: ApiCategory = {
             name: "url",
             type: "string",
             required: true,
-            description:
-              "External video URL (YouTube, TikTok, Google Drive).",
+            description: "External video URL (YouTube, TikTok, Google Drive).",
           },
           {
             name: "lang",
@@ -645,8 +644,7 @@ export const fileCategory: ApiCategory = {
             name: "url",
             type: "string",
             required: true,
-            description:
-              "External video URL (YouTube, TikTok, Google Drive).",
+            description: "External video URL (YouTube, TikTok, Google Drive).",
           },
           {
             name: "lang",
@@ -920,13 +918,12 @@ export const dubbingCategory: ApiCategory = {
             name: "targetLanguageCodes",
             type: "string[]",
             required: true,
-            description:
-              "Array of target language codes to translate into.",
+            description: "Array of target language codes to translate into.",
           },
           {
             name: "numberOfSpeakers",
             type: "integer",
-            required: true,
+            required: false,
             default: "1",
             description:
               "Number of speakers in the video for multi-speaker detection.",
@@ -1360,8 +1357,7 @@ export const dubbingCategory: ApiCategory = {
           name: "sharedStatus",
           type: "boolean",
           required: true,
-          description:
-            "Whether to enable (true) or disable (false) sharing.",
+          description: "Whether to enable (true) or disable (false) sharing.",
         },
       ],
       response: {
@@ -1488,8 +1484,7 @@ export const dubbingCategory: ApiCategory = {
       method: "GET",
       path: "/video-translator/api/v1/projects/{projectSeq}/spaces/{spaceSeq}/retranslation/status",
       title: "Check Retranslation Status",
-      description:
-        "Check whether retranslation is available for a project.",
+      description: "Check whether retranslation is available for a project.",
       pathParams: [
         {
           name: "projectSeq",
@@ -1583,8 +1578,7 @@ export const editingCategory: ApiCategory = {
             name: "targetText",
             type: "string",
             required: true,
-            description:
-              "The text to translate or the updated translation.",
+            description: "The text to translate or the updated translation.",
           },
         ],
         example: `{
@@ -1618,8 +1612,7 @@ export const editingCategory: ApiCategory = {
       method: "PATCH",
       path: "/video-translator/api/v1/project/{projectSeq}/audio-sentence/{audioSentenceSeq}/generate-audio",
       title: "Generate Audio",
-      description:
-        "Generate a translated audio file for a specific sentence.",
+      description: "Generate a translated audio file for a specific sentence.",
       pathParams: [
         {
           name: "projectSeq",
@@ -1675,8 +1668,7 @@ export const editingCategory: ApiCategory = {
       method: "PUT",
       path: "/video-translator/api/v1/project/{projectSeq}/audio-sentence/{audioSentenceSeq}/reset",
       title: "Reset Translation",
-      description:
-        "Reset a translation back to its original proofread state.",
+      description: "Reset a translation back to its original proofread state.",
       pathParams: [
         {
           name: "projectSeq",
@@ -1707,8 +1699,7 @@ export const editingCategory: ApiCategory = {
       method: "PUT",
       path: "/video-translator/api/v1/project/{projectSeq}/audio-sentence/{audioSentenceSeq}/cancel",
       title: "Cancel Translation",
-      description:
-        "Cancel an in-progress translation for a specific sentence.",
+      description: "Cancel an in-progress translation for a specific sentence.",
       pathParams: [
         {
           name: "projectSeq",
@@ -1859,15 +1850,13 @@ export const editingCategory: ApiCategory = {
             name: "isLipSync",
             type: "boolean",
             required: false,
-            description:
-              "Whether to enable lip sync for the proofread output.",
+            description: "Whether to enable lip sync for the proofread output.",
           },
           {
             name: "experimentKey",
             type: "string",
             required: false,
-            description:
-              "Experiment key for A/B testing configurations.",
+            description: "Experiment key for A/B testing configurations.",
           },
           {
             name: "preferredSpeedType",
@@ -2325,8 +2314,7 @@ export const languageCategory: ApiCategory = {
 export const feedbackCategory: ApiCategory = {
   slug: "feedback",
   title: "Feedback API",
-  description:
-    "Submit and retrieve feedback ratings for translated projects.",
+  description: "Submit and retrieve feedback ratings for translated projects.",
   endpoints: [
     {
       id: "submit-feedback",
@@ -2414,8 +2402,7 @@ export const feedbackCategory: ApiCategory = {
 export const communitySpotlightCategory: ApiCategory = {
   slug: "community-spotlight",
   title: "Community Spotlight API",
-  description:
-    "Browse featured public projects and shared translations.",
+  description: "Browse featured public projects and shared translations.",
   endpoints: [
     {
       id: "list-recommended",
@@ -2442,8 +2429,7 @@ export const communitySpotlightCategory: ApiCategory = {
           name: "languageCode",
           type: "string",
           required: false,
-          description:
-            "Filter by target language code (e.g. ko, en, ja).",
+          description: "Filter by target language code (e.g. ko, en, ja).",
         },
       ],
       response: {
